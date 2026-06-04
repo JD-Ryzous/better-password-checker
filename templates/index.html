@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal_ // Password Sec-Check</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="glitch">SYS_ACCESS_TERMINAL</h1>
+        <p>> Enter your key for strength analysis_</p>
+        <input type="password" id="password" placeholder="Type password..." oninput="checkStrength()">
+        
+        <div id="result-box">
+            <p id="status-text">STATUS: <span id="strength" class="blink">AWAITING_INPUT</span></p>
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+            <ul id="feedback-list"></ul>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
